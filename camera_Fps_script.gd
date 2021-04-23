@@ -41,7 +41,8 @@ func mouse(event):
 func _input(event):
 #	processa os movimentos do mouse
 	if event is InputEventMouseMotion:
-		return mouse(event)
+		if mouseVisible==false:
+			return mouse(event)
 
 func _leave_tree():
 	"""
